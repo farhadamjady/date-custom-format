@@ -51,7 +51,7 @@ DateCustomFormat.prototype.convert = function ()
 
     DD = D < 10 ? ( '0' + D ) : D;
 
-    DDDD =
+    DDD =
     [
         "Sunday",
         "Monday",
@@ -64,7 +64,7 @@ DateCustomFormat.prototype.convert = function ()
 
     DDD = DDD.substring( 0, 3 );
 
-    th = ( D >= 10 && D <= 20 ) ? 'th' : ( ( dMod = D%10 ) === 1 ) ? 'st' : ( dMod === 2 ) ? 'nd' : ( dMod === 3 ) ? 'rd' : 'th';
+    th = ( D >= 10 && D <= 20 ) ? 'th' : ( ( dMod = D % 10 ) === 1 ) ? 'st' : ( dMod === 2 ) ? 'nd' : ( dMod === 3 ) ? 'rd' : 'th';
 
     this.currentFormat =
         this.currentFormat
